@@ -9,47 +9,34 @@ print("=" * 45)
 print("KONVERSI NILAI ANGKA KE HURUF MUTU")
 print("=" * 45)
 
-# Input dari user
-nilai_input = input("Masukkan nilai akhir (0-100): ")
-
-# Cek apakah input berupa angka
-if not nilai_input.isdigit():
-    print("\n[ERROR] Input harus berupa angka bulat!")
+try:
+    nilai = float(input("Masukkan nilai (0 sampai 100): "))
+except ValueError:
+    print("\n[ERROR] Input harus berupa angka, contoh: 85 atau 85.5")
     print("=" * 45)
     exit()
 
-nilai = int(nilai_input)
-
-# Cek rentang nilai
 if nilai < 0 or nilai > 100:
     print("\n[ERROR] Nilai harus berada dalam rentang 0 - 100!")
     print("=" * 45)
 else:
-    # Konversi ke huruf mutu (minimal 4 elif)
     if nilai >= 90:
-        huruf = "A"
-        keterangan = "Lulus"
+        huruf, keterangan = "A", "Lulus"
     elif nilai >= 80:
-        huruf = "B"
-        keterangan = "Lulus"
+        huruf, keterangan = "B", "Lulus"
     elif nilai >= 70:
-        huruf = "C"
-        keterangan = "Tidak Lulus"
+        huruf, keterangan = "C", "Lulus"
     elif nilai >= 50:
-        huruf = "D"
-        keterangan = "Tidak Lulus"
-    elif nilai <= 50:
-        huruf = "E"
-        keterangan = "Tidak Lulus"
+        huruf, keterangan = "D", "Tidak Lulus"
+    elif nilai >= 20:
+        huruf, keterangan = "E", "Tidak Lulus"
     else:
-        huruf = "E"
-        keterangan = "Tidak Lulus"
+        huruf, keterangan = "F", "Tidak Lulus"
 
-    # Output dengan f-string
     print("\n" + "=" * 45)
     print("HASIL KONVERSI")
     print("=" * 45)
-    print(f"Nilai Angka : {nilai}")
+    print(f"Nilai Angka : {nilai:g}")
     print(f"Huruf Mutu  : {huruf}")
     print(f"Keterangan  : {keterangan}")
     print("=" * 45)
