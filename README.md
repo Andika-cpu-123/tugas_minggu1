@@ -1,3 +1,10 @@
+
+# =========================
+# Nama       : Mutia Anggraini
+# NIM        : 714260007
+# Kelompok   : 06 / The Changcuters
+===========================
+=======
 Nama    : Muhammad Hilal Ahmar
 NPM     : 613260016
 Kelompok: The Changcuters
@@ -22,3 +29,4 @@ Folder ini berisi latihan dan tugas Modul 1 pada pelatihan MORRIS Teknik Informa
 ## Cara Menjalankan
 jalankan perintah berikut pada terminal
 python latihan1_kalkulator.py
+
